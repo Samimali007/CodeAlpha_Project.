@@ -1,0 +1,123 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #000000; /* Light background color for the body */
+  color: #ffffff; /* Text color to ensure readability */
+  padding: 20px;
+}
+
+/* Header */
+.gallery-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #ffffff, #feb47b);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Gallery Layout */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff; /* Light background for the gallery area */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 80%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Lightbox Styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-content {
+  position: relative;
+  text-align: center;
+}
+
+#lightbox-img {
+  max-width: 80%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.lightbox-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+button {
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+button:focus {
+  outline: none;
+}

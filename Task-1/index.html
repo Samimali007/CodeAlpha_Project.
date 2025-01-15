@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="gallery-header">
+    <h1>Image Gallery</h1>
+  </header>
+
+  <div class="gallery-container">
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox(0)">
+        <img src="images/image1.webp" alt="Image 1">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(1)">
+        <img src="images/image2.jpeg" alt="Image 2">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(2)">
+        <img src="images/image3.jpeg" alt="Image 3">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(3)">
+        <img src="images/image4.jpg" alt="Image 4">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(4)">
+        <img src="images/image5.jpg" alt="Image 5">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(5)">
+        <img src="images/image6.jpg" alt="Image 6">
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-content">
+      <span class="close-btn" onclick="closeLightbox()">×</span>
+      <img id="lightbox-img" src="" alt="Full Image">
+      <div class="lightbox-navigation">
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
