@@ -1,0 +1,138 @@
+/* General body and page styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #a8c0ff, #3f2b96); /* Gradient background */
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Calculator container styling */
+.calculator {
+  background-color: #1e1e2f;
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out; /* Smooth transformation */
+}
+
+/* Hover effect on calculator */
+.calculator:hover {
+  transform: scale(1.05); /* Slightly enlarges when hovered */
+}
+
+/* Display styling */
+.display {
+  width: 100%;
+  height: 70px; /* Increased height for better visibility */
+  font-size: 28px; /* Adjusted font size */
+  text-align: right;
+  margin-bottom: 30px;
+  padding: 10px px; /* Adjusted padding */
+  border: none;
+  border-radius: 15px; /* Increased border radius for smooth edges */
+  background: #2b2c3c; /* Darker shade for better contrast */
+  color: white;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.25); /* Inner shadow effect */
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+  overflow: hidden; /* Prevents overflow text */
+  word-wrap: break-word; /* Wraps long numbers/text */
+}
+
+/* Display active effect */
+.display:focus {
+  background: #3a3a5a;
+  outline: none;
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  background: linear-gradient(135deg, #ddb0b1, #ff9966); /* Gradient button */
+  border: none;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease; /* Smooth transitions */
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 6px 15px rgba(97, 97, 97, 0.1);
+}
+
+/* Button hover and active effect */
+button:hover {
+  background: linear-gradient(135deg, #ff9966, #ff5e62); /* Hover effect */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+button:active {
+  transform: translateY(2px); /* Slight press effect on click */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Special button (Clear and Equal) styling */
+button#clear {
+  background: #ff4f58;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button#clear:hover {
+  background: #ff7f85;
+}
+
+button#equal {
+  background: #5e60e2;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button#equal:hover {
+  background: #758fe6;
+}
+
+/* Styling for number buttons */
+button.num {
+  background: #4caf50;
+}
+
+button.num:hover {
+  background: #66bb6a;
+}
+
+/* Enhanced button for operators */
+button.operator {
+  background: #ffb300;
+}
+
+button.operator:hover {
+  background: #ffcc33;
+}
+
+/* Adding animations on load */
+.calculator {
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Animation for calculator */
+@keyframes slideIn {
+  0% {
+      transform: translateY(-100vh);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
